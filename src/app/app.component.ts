@@ -16,7 +16,7 @@ export class AppComponent {
     const cache = localStorage.getItem('resource');
     if (cache) {
       this.original = cache;
-      this.onClick();
+      this.compile();
     }
   }
 
@@ -27,7 +27,7 @@ export class AppComponent {
   }
 
   onClick(): void {
-    this.compile();
     localStorage.setItem('resource', this.original);
+    location.reload();
   }
 }
