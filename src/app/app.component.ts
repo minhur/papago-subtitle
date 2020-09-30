@@ -18,10 +18,9 @@ export class AppComponent {
   }
 
   compile(): void {
-    const result = this.original.split('\n\n').map((p: string) => {
-      return p.split('\n');
-    });
-    this.result = result;
+    this.result = this.original
+      .split('\n\n')
+      .map((p: string) => p.split('\n'));
   }
 
   onClick(): void {

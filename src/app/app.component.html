@@ -1,12 +1,12 @@
 <div class="container">
   <mat-form-field appearance="fill" class="form-field">
-    <mat-label>원본</mat-label>
+    <mat-label>자막 원본</mat-label>
     <textarea matInput rows="15" [(ngModel)]="original" placeholder="자막의 일부분 혹은 전체를 붙여넣기 하세요"></textarea>
   </mat-form-field>
   <section>
-    <button mat-raised-button (click)="onClick()">Basic</button>
+    <button mat-raised-button (click)="onClick()">저장</button>
   </section>
-  <section>
+  <section class="result">
     <div *ngFor="let items of result">
       <p *ngFor="let item of items">{{ item }}</p>
       <br>

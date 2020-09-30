@@ -1,8 +1,11 @@
 .container {
-  margin-top: 2rem;
+  width: calc(100vw - 4rem);
+  margin: 2rem auto;
   .form-field {
-    width: calc(100vw - 10rem);
-    height: 20rem;
+    width: 100%;
+  }
+  .result {
+    margin-top: 2rem;
   }
   p {
     margin-bottom: 0;
