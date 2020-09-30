@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   original = '';
   result = [['']];
+  papagoLink = `https://papago.naver.net/website?locale=ko&source=auto&target=ko&url=${encodeURI(
+    location.href
+  )}`;
 
   constructor() {
     const cache = localStorage.getItem('resource');
