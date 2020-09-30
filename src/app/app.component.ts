@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   original = '';
-  result = '';
+  result = [['']];
 
   constructor() {
     const cache = localStorage.getItem('resource');
