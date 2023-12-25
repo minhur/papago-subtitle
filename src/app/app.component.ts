@@ -30,4 +30,15 @@ export class AppComponent {
     localStorage.setItem('resource', this.original);
     location.reload();
   }
+
+  onSelect(): void {
+    const node = document.querySelector('section.result');
+    if (window.getSelection) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  }
 }
