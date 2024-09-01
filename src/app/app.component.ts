@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
       setTimeout(() => {
         window.scrollTo(0, 0);
         this.onSelect();
-      }, 2000); 
-    }, 2000);     
+      }, 500); 
+    }, 500);     
   } 
 
   constructor() {
