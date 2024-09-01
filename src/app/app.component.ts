@@ -1,16 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewChecked {
   original = '';
   result = [['']];
   papagoLink = `https://papago.naver.net/website?locale=ko&source=auto&target=ko&url=${encodeURIComponent(
     location.href
   )}`;
+
+  ngAfterViewChecked() {        
+    this.scrollToBottom();        
+  } 
+
+  scrollToBottom(): void {
+      try {
+          console.log('scroll');
+          window.scrollTo(0, document.body.scrollHeight);
+          window.scrollTo(0, 0);
+      } catch(err) { }                 
+  }
 
   constructor() {
     const cache = localStorage.getItem('resource');
@@ -24,6 +36,8 @@ export class AppComponent {
     this.result = this.original
       .split('\n\n')
       .map((p: string) => p.split('\n'));
+
+    window.scrollTo(0, document.body.scrollHeight);
   }
 
   onClick(): void {
@@ -41,4 +55,5 @@ export class AppComponent {
       selection.addRange(range);
     }
   }
+
 }
