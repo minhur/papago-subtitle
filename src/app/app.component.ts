@@ -51,6 +51,7 @@ export class AppComponent implements OnInit {
       range.selectNodeContents(node);
       selection.removeAllRanges();
       selection.addRange(range);
+      document.execCommand("copy");
     }
   }
 
