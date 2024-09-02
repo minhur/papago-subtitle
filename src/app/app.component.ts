@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
       window.scrollTo(0, document.body.scrollHeight);
       setTimeout(() => {
         window.scrollTo(0, 0);
-        this.onSelect();
       }, 500); 
-    }, 500);     
+      this.onSelect();
+    }, 2000);     
   } 
 
   constructor() {
