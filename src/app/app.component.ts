@@ -15,11 +15,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {        
     setTimeout(() => {
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 500); 
       this.onSelect();
-    }, 500);     
+    }, 1000);     
   } 
 
   constructor() {
